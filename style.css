@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: "VT323", monospace;
     background-color: #414141;
+    overflow-y: hidden;
 }
 #game-borad{
     display: grid;
@@ -13,6 +14,7 @@ body {
     grid-template-rows: repeat(20, 20px);
     border-radius: 100px;
     margin: 5px;
+
 }
 .game-border-1{
     border: solid 10px #595f43;
@@ -59,12 +61,17 @@ body {
     margin-bottom: 0px;
 }
 .snake{
-    border: #5a5a5a 1px dotted;
-    background-color: #414141;
+    border: #086810 3px solid;
+    background-color: #0d9418;
+    border-radius: 50%;
 }
 .food{
-    background-color: #dedede;
-    border: #999 5px solid;
+    background-color: #d43e3e;
+    border: #691212 2px solid;
+    border-radius: 50%;
+    box-shadow: #d8ddca inset 1px 1px 1px;
+    width: 12px;
+    height: 12px;
 }
 
 .start-logo{
@@ -78,9 +85,12 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body{
+        height: 85vh;
+    }
     #game-borad{
-        grid-template-columns: repeat(20, 12px);
-        grid-template-rows: repeat(20, 12px);
+        grid-template-columns: repeat(20, 15px);
+        grid-template-rows: repeat(20, 15px);
     }
     .start-text{
         font-size: 20px;
@@ -90,10 +100,10 @@ body {
     }
     #logo{
         width: 80%;
-        margin-top: 2%;
+        margin-top: 1%;
     }
     .start-logo{
-        top: 35vh;
+        top: 30vh;
         
     }
 
