@@ -79,12 +79,8 @@ body {
 
 @media screen and (max-width: 768px) {
     #game-borad{
-        grid-template-columns: repeat(20, 15px);
-        grid-template-rows: repeat(20, 15px);
-    }
-    .controls{
-        grid-template-columns: repeat(4, 75px);
-        grid-template-rows: repeat(1, 50px);      
+        grid-template-columns: repeat(20, 12px);
+        grid-template-rows: repeat(20, 12px);
     }
     .start-text{
         font-size: 20px;
