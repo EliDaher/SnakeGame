@@ -204,50 +204,40 @@ function stopGame(){
 borad.addEventListener('touchstart', function(event){
     touchStartX = event.changedTouches[0].screenX;
     touchStartY = event.changedTouches[0].screenY;
-    console.log(touchStartX);
+    console.log("start" + touchStartY);
 }, false);
 
 borad.addEventListener('touchend', function(event){
     touchEndX = event.changedTouches[0].screenX;
     touchEndY = event.changedTouches[0].screenY;
-    console.log(touchEndX);
+    console.log("End" + touchEndY);
+    console.log(event.changedTouches);
     touchdetect();
 }, false);
 
 function touchdetect() {
     
-    if (touchEndX < touchStartX) {
-        direction = 'left';
-    }
-    if (touchEndX > touchStartX) {
-        direction = 'right';
-    }
-    if (touchEndY < touchStartY) {
-        direction = 'down';
-    }
-    if (touchEndY > touchStartY) {
-        direction = 'up'; 
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    let Xchange = touchEndX - touchStartX;
+    let Ychange = touchEndY - touchStartY;
     
+    if(Math.abs(Xchange) > Math.abs(Ychange)){
+
+        if (Xchange < 0) {
+            direction = 'left';
+        }
+        if (Xchange > 0) {
+            direction = 'right';
+        }
+        
+    } 
+    else{
+
+        if (Ychange < 0) {
+            direction = 'up'; 
+        }
+        if (Ychange > 0) {
+            direction = 'down';
+        }
+        
+    }
+}
