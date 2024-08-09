@@ -219,13 +219,13 @@ function touchdetect() {
     if (touchEndX < touchStartX) {
         direction = 'left';
     }
-    else if (touchEndX > touchStartX) {
+    if (touchEndX > touchStartX) {
         direction = 'right';
     }
-    else if (touchEndY < touchStartY) {
+    if (touchEndY < touchStartY) {
         direction = 'down';
     }
-    else if (touchEndY > touchStartY) {
+    if (touchEndY > touchStartY) {
         direction = 'up'; 
     }
 
